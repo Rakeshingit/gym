@@ -10,7 +10,7 @@ import Animated, {
   useSharedValue,
   withDelay,
   withTiming,
-} from "react-native-reanimated";
+} from "react-native-reanimated";  
 
 export default function SplashScreen() {
   // Logo scale animation
