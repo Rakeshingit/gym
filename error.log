@@ -1,0 +1,11 @@
+
+> native@1.0.0 start
+> expo start
+
+Starting project at /home/sabir/Documents/Weavfit-Gym-App-master
+› Port 8081 is running this app in another window
+  /home/sabir/Documents/Weavfit-Gym-App-master (pid 24652)
+Input is required, but 'npx expo' is in non-interactive mode.
+Required input:
+> Use port 8082 instead?
+› Skipping dev server
