@@ -40,7 +40,7 @@ export default function Login() {
         <View className="mt-4 flex-row justify-center">
           <Text className="text-gray-500">Don’t have an account? </Text>
           <Pressable>
-            <Text className="text-black font-bold">Sign Up</Text>
+            <Text className="text-black  font-bold">Sign Up</Text>
           </Pressable>
         </View>
       </View>

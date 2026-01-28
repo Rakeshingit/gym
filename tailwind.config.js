@@ -9,7 +9,14 @@ module.exports = {
   ],
   presets: [require("nativewind/preset")],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        light: ["Montserrat_300Light"],
+        regular: ["Montserrat_400Regular"],
+        semibold: ["Montserrat_600SemiBold"],
+        bold: ["Montserrat_700Bold"],
+      },
+    },
   },
   plugins: [],
 };

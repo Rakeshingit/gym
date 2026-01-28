@@ -1,6 +1,5 @@
-
 import { StatusBar } from "expo-status-bar";
-import { Dimensions, Image,  Text, View } from "react-native";
+import { Dimensions, Image, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import NavButton from "./components/NavButton";
 
@@ -12,7 +11,6 @@ export default function Onboarding() {
       <StatusBar style="dark" />
 
       <View className="flex-1 px-5 items-center">
-
         {/* 🖼️ IMAGE SECTION */}
         <View
           style={{ height: height * 0.74 }} // 👈 responsive ratio
@@ -37,26 +35,17 @@ export default function Onboarding() {
 
         {/* 📝 TEXT + BUTTON SECTION */}
         <View className="flex-1 items-center w-[94%] mt-3">
-
           <Text className="text-[26px] font-bold text-black text-center">
             Transform in 100 Days
           </Text>
 
-          <Text className="mt-2 text-[15px] text-gray-500 text-center leading-5 w-[85%]">
-            Achieve weight loss with balanced workouts, mindful diet and guided training.
+          <Text className="mt-2 text-[18px] text-gray-500 text-center leading-5 w-[85%] font-light">
+            Achieve weight loss with balanced workouts, mindful diet and guided
+            training.
           </Text>
 
-          <NavButton
-              title="Next"
-              to="/(auth)/login"
-
-          />
-
-
-
-
+          <NavButton title="Get Started" to="/(auth)/welcome" />
         </View>
-
       </View>
     </SafeAreaView>
   );
