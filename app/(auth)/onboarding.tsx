@@ -1,7 +1,8 @@
-import { router } from "expo-router";
+
 import { StatusBar } from "expo-status-bar";
-import { Dimensions, Image, Pressable, Text, View } from "react-native";
+import { Dimensions, Image,  Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import NavButton from "./components/NavButton";
 
 const { height } = Dimensions.get("window");
 
@@ -45,14 +46,15 @@ export default function Onboarding() {
             Achieve weight loss with balanced workouts, mindful diet and guided training.
           </Text>
 
-          <Pressable
-            className="mt-6 bg-orange-500 w-full h-[52px] rounded-full items-center justify-center"
-            onPress={() => router.push("/(auth)/login")}
-          >
-            <Text className="text-white text-[17px] font-bold">
-              Get Started
-            </Text>
-          </Pressable>
+          <NavButton
+              title="Next"
+              to="/(auth)/login"
+
+          />
+
+
+
+
         </View>
 
       </View>
