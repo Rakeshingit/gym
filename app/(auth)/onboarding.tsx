@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { Dimensions, Image, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import NavButton from "./components/NavButton";
+import NavButton from "../../components/onboarding/NavButton";
 
 const { height } = Dimensions.get("window");
 

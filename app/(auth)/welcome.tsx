@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { Image, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import NavButton from "./components/NavButton";
+import NavButton from "../../components/onboarding/NavButton";
 
 export default function Welcome() {
   return (
