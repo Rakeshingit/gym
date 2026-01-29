@@ -1,8 +1,4 @@
-import {
-  Montserrat_400Regular,
-  Montserrat_700Bold,
-  useFonts,
-} from "@expo-google-fonts/montserrat";
+import { useFonts } from "expo-font";
 import { createContext, ReactNode, useContext, useState } from "react";
 
 const AppLoaderContext = createContext<{
@@ -17,8 +13,11 @@ export function AppLoaderProvider({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false);
 
   const [fontsLoaded] = useFonts({
-    Montserrat_400Regular,
-    Montserrat_700Bold,
+    MontserratLight: require("assets/fonts/Montserrat-Light.ttf"),
+    MontserratRegular: require("assets/fonts/Montserrat-Regular.ttf"),
+    MontserratMedium: require("assets/fonts/Montserrat-Medium.ttf"),
+    MontserratSemiBold: require("assets/fonts/Montserrat-SemiBold.ttf"),
+    MontserratBold: require("assets/fonts/Montserrat-Bold.ttf"),
   });
 
   // 🚨 If fonts not loaded → render nothing (keep splash)
