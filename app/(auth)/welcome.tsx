@@ -28,9 +28,9 @@ export default function Welcome() {
               behaviour change
             </Text>
           </View>
-          <View className="w-full justify-center flex">
+          <View className="w-full justify-center gap-3 pt-3 flex">
             <NavButton title="Login" to="/(auth)/login" />
-            <NavButton title="SignUp" to="/(auth)/signup" />
+            <NavButton title="SignUp" to="/(auth)/signin" />
           </View>
         </View>
       </View>

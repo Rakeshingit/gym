@@ -39,7 +39,7 @@ export default function Onboarding() {
             Transform in 100 Days
           </Text>
 
-          <Text className="mt-2 text-[18px] text-gray-500 text-center leading-5 w-[85%] font-light">
+          <Text className="mt-2 mb-5 text-[18px] text-gray-500 text-center leading-5 w-[85%] font-light">
             Achieve weight loss with balanced workouts, mindful diet and guided
             training.
           </Text>

@@ -2,37 +2,46 @@ import { Pressable, Text } from "react-native";
 import { router } from "expo-router";
 
 type NavButtonProps = {
-    title: string;
-    to?: string; // ✅ simple & flexible
-    onPress?: () => void;
+  title: string;
+  to?: string;
+  onPress?: () => void;
 
-    rounded?: "md" | "full";
-    width?: "full" | "half";
+  rounded?: "md" | "full" | number; // ✅ allow number (px)
+  width?: "full" | "half";
 };
 
 export default function NavButton({
-                                      title,
-                                      to,
-                                      onPress,
-                                      rounded = "md",
-                                      width = "full",
-                                  }: NavButtonProps) {
-    const handlePress = () => {
-        if (onPress) return onPress();
-        if (to) router.push(to as any); // ✅ fix expo-router typing issue
-    };
+  title,
+  to,
+  onPress,
+  rounded = "md",
+  width = "full",
+}: NavButtonProps) {
+  const handlePress = () => {
+    if (onPress) return onPress();
+    if (to) router.push(to as any);
+  };
 
-    const radiusClass = rounded === "full" ? "rounded-full" : "rounded-[10px]";
-    const widthClass = width === "half" ? "w-[47%]" : "w-full";
+  const widthClass = width === "half" ? "w-[47%]" : "w-full";
 
-    return (
-        <Pressable
-            className={`mt-6 bg-orange-500 h-[52px] items-center justify-center ${radiusClass} ${widthClass}`}
-            onPress={handlePress}
-        >
-            <Text className="text-white text-[17px] font-bold">
-                {title}
-            </Text>
-        </Pressable>
-    );
+  // ✅ Tailwind OR inline style for radius
+  const radiusClass =
+    rounded === "full"
+      ? "rounded-full"
+      : rounded === "md"
+        ? "rounded-[10px]"
+        : "";
+
+  const customRadiusStyle =
+    typeof rounded === "number" ? { borderRadius: rounded } : {};
+
+  return (
+    <Pressable
+      className={`bg-orange-500 h-[52px] items-center justify-center ${widthClass} ${radiusClass}`}
+      style={customRadiusStyle} // ✅ dynamic px radius
+      onPress={handlePress}
+    >
+      <Text className="text-white text-[17px] font-bold">{title}</Text>
+    </Pressable>
+  );
 }
