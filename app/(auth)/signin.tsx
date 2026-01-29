@@ -52,7 +52,7 @@ export default function SignIn() {
             <Text className="text-black text-[18px] font-regular">
               Already an account?{" "}
             </Text>
-            <Pressable>
+            <Pressable onPress={() => router.push("/(auth)/login")}>
               <Text className="text-[#E37528] text-[18px]  font-regular font-bold">
                 Login
               </Text>
