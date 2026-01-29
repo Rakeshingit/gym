@@ -10,11 +10,34 @@ module.exports = {
   presets: [require("nativewind/preset")],
   theme: {
     extend: {
+      colors: {
+        primary: "#E37528",
+        primary_light: "#F2C6A7",
+        background: "#FCFCFC",
+        white: "#FFFFFF",
+        black: "#363636",
+        light_red: "#FFEAEA",
+      },
+      fontSize: {
+        xs: "12px",
+        sm: "14px",
+        base: "16px",
+        md: "18px",
+        lg: "20px",
+        xl: "22px",
+        "2xl": "26px",
+        "3xl": "30px",
+      },
+      borderRadius: {
+        sm: "5px",
+        md: "30px",
+      },
       fontFamily: {
-        light: ["Montserrat_300Light"],
-        regular: ["Montserrat_400Regular"],
-        semibold: ["Montserrat_600SemiBold"],
-        bold: ["Montserrat_700Bold"],
+        sansLight: ["MontserratLight"],
+        sansRegular: ["MontserratRegular"],
+        sansMedium: ["MontserratMedium"],
+        sansSemiBold: ["MontserratSemiBold"],
+        sansBold: ["MontserratBold"],
       },
     },
   },
